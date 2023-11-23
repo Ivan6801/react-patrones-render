@@ -6,11 +6,11 @@ import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 
 export function App() {
-  const { todos, searchedTodos, openModal, setOpenModal } = useTodos();
+  const { searchedTodos, searchValue, setSearchValue } = useTodos();
   return (
     <>
       <TodoCounter />
-      <TodoSearch openModal={openModal} setOpenModal={setOpenModal} />
+      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList searchedTodos={searchedTodos}>
         {(todo) => (
